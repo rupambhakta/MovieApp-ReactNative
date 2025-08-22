@@ -1,0 +1,15 @@
+API Read Access Token - eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzY5MjhiYzY1NWFmZmMyZjlmZjU4NWM4NjM0OGU3MSIsIm5iZiI6MTc1NTg3NTM3NC4xLCJzdWIiOiI2OGE4ODgyZTMxZTU1MTFkNzVjNTcwYmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.dEGYgIMQNzlsVzA5n0hJphKgyqHPGfyHVYfx9gQ9I1I
+
+API Key - 2c6928bc655affc2f9ff585c86348e71
+
+GET request - 
+https://api.themoviedb.org/3/discover/movie
+
+Sample code - 
+const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
